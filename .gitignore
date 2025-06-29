@@ -1,0 +1,50 @@
+# Node modules
+node_modules/
+.expo/
+.yarn/
+
+# Metro Bundler cache
+.react-native/
+.tmp/
+temp/
+build/
+dist/
+coverage/
+
+# Android
+android/build/
+android/app/build/
+android/.gradle/
+android/gradle/wrapper/gradle-wrapper.jar
+android/local.properties
+android/*.keystore
+android/app/*.jks
+android/app/*.keystore
+android/app/google-services.json # If applicable and not needed in version control
+
+# iOS
+ios/build/
+ios/Pods/
+ios/.symlinks/
+ios/DerivedData/
+ios/*.xcworkspace
+ios/*.xcodeproj/project.xcworkspace/
+ios/*.xcodeproj/xcuserdata/
+ios/*.xcodeproj/xcshareddata/
+ios/fastlane/report.xml # If using fastlane and not needed in version control
+
+# IDE specific files
+.idea/
+.vscode/
+*.iml
+.DS_Store
+
+# Logs and temporary files
+*.log
+*.bak
+*.swp
+*.swo
+
+# Environment variables
+.env
+.env.*
