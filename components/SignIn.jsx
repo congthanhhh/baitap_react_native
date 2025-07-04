@@ -1,3 +1,4 @@
+import { useNavigation } from "@react-navigation/native";
 import { useState } from "react";
 import {
   Text,
@@ -10,6 +11,9 @@ import {
 
 export default function SignIn() {
   const [name] = useState("");
+
+  const navigation = useNavigation();
+
   return (
     <View style={styles.container}>
       <Text style={styles.title01}>Sign In</Text>
@@ -23,12 +27,12 @@ export default function SignIn() {
           <Text style={styles.title03}>Forgot password?</Text>
         </View>
 
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("ShowProduct")}>
           <Text style={styles.buttonText}>Log In</Text>
         </TouchableOpacity>
         <Text style={styles.buttonText}>OR</Text>
-        <TouchableOpacity style={styles.button01}>
-          <Text style={styles.buttonText}>Login With Facebook</Text>
+        <TouchableOpacity style={styles.button01} onPress={() => navigation.navigate("NewAccount")}>
+          <Text style={styles.buttonText}>Sign Up</Text>
         </TouchableOpacity>
         <Image source={require("../assets/gg.png")} style={styles.logo} />
         <TouchableOpacity style={styles.button04}>

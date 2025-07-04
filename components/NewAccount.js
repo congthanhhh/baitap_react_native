@@ -1,3 +1,4 @@
+import { useNavigation } from "@react-navigation/native";
 import { useState } from "react";
 import {
   Text,
@@ -10,11 +11,10 @@ import {
 
 export default function NewAccount() {
   const [name] = useState("");
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
-      {/* <TouchableOpacity style={styles.button03}>
-          <Text style={styles.buttonText03}>Back</Text>
-        </TouchableOpacity> */}
+
       <Text style={styles.title01}>Create new account</Text>
       <Image
         source={{
@@ -53,10 +53,13 @@ export default function NewAccount() {
             maxLength={10}
           />
         </View>
-       
+
 
         <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Send code</Text>
+          <Text style={styles.buttonText}>Create New Account</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.button} onPress={() => navigation.goBack()}>
+          <Text style={styles.buttonText}>Go To Sign In</Text>
         </TouchableOpacity>
         <Text>Or</Text>
       </View>
@@ -90,7 +93,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     padding: 0,
   },
-   phoneInput: {
+  phoneInput: {
     fontSize: 16,
   },
   button: {
@@ -109,7 +112,7 @@ const styles = StyleSheet.create({
     width: "200",
 
   },
-  
+
   button02: {
     backgroundColor: "none",
     paddingVertical: 0,
