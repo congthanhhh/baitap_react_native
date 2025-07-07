@@ -58,7 +58,8 @@ export default function NewAccount() {
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Create New Account</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button} onPress={() => navigation.goBack()}>
+        <TouchableOpacity style={styles.button}
+          onPress={() => navigation.goBack()}>
           <Text style={styles.buttonText}>Go To Sign In</Text>
         </TouchableOpacity>
         <Text>Or</Text>

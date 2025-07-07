@@ -27,11 +27,13 @@ export default function SignIn() {
           <Text style={styles.title03}>Forgot password?</Text>
         </View>
 
-        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("ShowProduct")}>
+        <TouchableOpacity style={styles.button}
+          onPress={() => navigation.navigate("ShowProduct")}>
           <Text style={styles.buttonText}>Log In</Text>
         </TouchableOpacity>
         <Text style={styles.buttonText}>OR</Text>
-        <TouchableOpacity style={styles.button01} onPress={() => navigation.navigate("NewAccount")}>
+        <TouchableOpacity style={styles.button01}
+          onPress={() => navigation.navigate("NewAccount")}>
           <Text style={styles.buttonText}>Sign Up</Text>
         </TouchableOpacity>
         <Image source={require("../assets/gg.png")} style={styles.logo} />
